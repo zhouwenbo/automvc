@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hero详情</title>
+</head>
+<body>
+<table>
+    <thead>
+    <td>id</td>
+    <td>年龄</td>
+    <td>姓名</td>
+    <td>出处</td>
+    <td>绝招</td>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${hero.hero_id}"></td>
+        <td th:text="${hero.age}"></td>
+        <td th:text="${hero.name}"></td>
+        <td th:text="${hero.from}"></td>
+        <td th:text="${hero.skill}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

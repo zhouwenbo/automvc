@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>这是一个神奇的事情</title>
+    <script type="application/javascript" src="../../js/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <p><span style="color:red">见证奇迹的时刻</span></p>
+<table>
+    <thead>
+        <td>id</td>
+        <td>年龄</td>
+        <td>姓名</td>
+        <td>出处</td>
+        <td>绝招</td>
+    </thead>
+    <tbody>
+    <tr th:each="hero : ${list}">
+        <td th:text="${hero.hero_id}"></td>
+        <td th:text="${hero.age}"></td>
+        <td th:text="${hero.name}"></td>
+        <td th:text="${hero.from}"></td>
+        <td th:text="${hero.skill}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+
+<!--<script type="application/javascript">
+    var list = $('#list').val()
+    $.each(list,function(i, obj){
+        console.log(i,obj.toString())
+    })
+</script>-->
+</html>
